@@ -1,10 +1,10 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite';
 
 export default defineConfig({
   build: {
     sourcemap: true,
     rollupOptions: {
-      input: "src/index.html",
+      input: 'src/index.html',
     },
   },
 });
