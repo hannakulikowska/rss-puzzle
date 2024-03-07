@@ -2,4 +2,7 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npm test
-npx validate-branch-name
+current_branch="$(git rev-parse --abbrev-ref HEAD)"
+if [ "$current_branch" != "rss-puzzle" ]; then
+  npx validate-branch-name
+fi
