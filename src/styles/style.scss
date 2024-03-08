@@ -1,0 +1,26 @@
+@import '../../node_modules/modern-normalize/modern-normalize.css';
+
+@import './fonts.scss';
+@import './mixins.scss';
+@import './variables.scss';
+
+@import './pages/login/login.scss';
+@import './pages/login/login-inputs.scss';
+@import './pages/login/login-button.scss';
+
+@import './components/background-image.scss';
+@import './components/button.scss';
+
+html {
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  width: 100vw;
+  height: 100dvh;
+  @include flex(center, center);
+}
