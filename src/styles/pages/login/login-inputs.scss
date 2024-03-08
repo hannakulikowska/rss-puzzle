@@ -1,0 +1,30 @@
+.login-form__input-field {
+  font-size: 1em;
+  padding: 0.8rem;
+  border: 2px solid;
+  border-radius: $border-radius;
+  color: $color-darkgray;
+  transition: $transition;
+
+  &::placeholder {
+    font-size: 1em;
+    color: $color-lightgray;
+  }
+
+  &:enabled {
+    border-color: $color-enabled;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    border-color: $color-hover;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $color-active;
+  }
+}

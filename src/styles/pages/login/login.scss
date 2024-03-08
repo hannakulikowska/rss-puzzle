@@ -1,0 +1,12 @@
+.login-page-wrapper {
+  background-image: url('steve-johnson.webp');
+}
+
+.login-form {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background: $color-white;
+  border-radius: 10px;
+}
