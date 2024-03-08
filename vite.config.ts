@@ -4,7 +4,7 @@ export default defineConfig({
   build: {
     sourcemap: true,
     rollupOptions: {
-      input: 'src/index.html',
+      input: 'index.html',
     },
   },
 });
