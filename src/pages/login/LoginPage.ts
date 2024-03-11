@@ -1,35 +1,13 @@
-import ElementCreator from '../../utils/elementСreator';
-import { createInputField } from './createInputField';
-import { loginButton } from './createLoginButton';
+import LoginForm from './LoginForm';
 
 export default class LoginPage {
-  private formElement: HTMLElement;
+  private loginForm: LoginForm;
 
   constructor() {
-    this.formElement = this.createFormElements();
-  }
-
-  private createFormElements(): HTMLElement {
-    const formCreator = new ElementCreator({
-      tag: 'form',
-      classNames: ['login-form'],
-    });
-    const firstNameInput = createInputField('First Name');
-    formCreator.addInnerElement(firstNameInput);
-
-    const surnameInput = createInputField('Surname');
-    formCreator.addInnerElement(surnameInput);
-
-    formCreator.addInnerElement(loginButton);
-
-    const formElement = formCreator.getElement();
-    if (!formElement) {
-      throw new Error('Failed to create the form element.');
-    }
-    return formElement;
+    this.loginForm = new LoginForm();
   }
 
   public getFormElement(): HTMLElement {
-    return this.formElement;
+    return this.loginForm.getFormElement();
   }
 }

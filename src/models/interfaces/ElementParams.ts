@@ -3,4 +3,5 @@ export interface ElementParams {
   classNames?: string[];
   textContent?: string;
   callback?: (event: Event) => void;
+  attributes?: { [key: string]: string };
 }

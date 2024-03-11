@@ -1,7 +1,7 @@
 import ElementCreator from './elementСreator';
 import ButtonParams from '../models/interfaces/ButtonParams';
 
-export function Button({
+export default function Button({
   type,
   textContent,
   classNames = [],

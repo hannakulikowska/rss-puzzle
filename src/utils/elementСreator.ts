@@ -24,11 +24,17 @@ export default class ElementCreator {
     classNames,
     textContent,
     callback,
+    attributes,
   }: ElementParams): HTMLElement {
     const element = document.createElement(tag);
     if (classNames) this.setCssClasses(element, classNames);
     if (textContent !== undefined) this.setTextContent(element, textContent);
     if (callback) this.setCallback(element, callback);
+    if (attributes) {
+      Object.keys(attributes).forEach((key) => {
+        element.setAttribute(key, attributes[key]);
+      });
+    }
     return element;
   }
 
