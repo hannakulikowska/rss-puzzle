@@ -1,5 +1,5 @@
 import ElementCreator from '../utils/elementСreator';
-import PageWrapperParams from '../models/interfaces/PageWrapperParams.ts';
+import PageWrapperParams from '../models/interfaces/PageWrapperParams';
 
 export class PageWrapper {
   private wrapperElement: HTMLElement;

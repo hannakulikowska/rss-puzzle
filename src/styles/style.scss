@@ -3,10 +3,11 @@
 @import './fonts.scss';
 @import './mixins.scss';
 @import './variables.scss';
+@import './components/fontello.scss';
 
 @import './pages/login/login.scss';
 @import './pages/login/login-inputs.scss';
-@import './pages/login/login-button.scss';
+@import './pages/login/form-errors.scss';
 
 @import './components/background-image.scss';
 @import './components/button.scss';
