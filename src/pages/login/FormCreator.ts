@@ -5,6 +5,7 @@ import {
   firstNameRules,
   surnameRules,
 } from '../../utils/createValidationRules';
+import FormSubmitHandler from '../../utils/FormSubmitHandler';
 
 export default class FormCreator {
   private formElement: HTMLElement;
@@ -24,6 +25,11 @@ export default class FormCreator {
     );
     this.loginButton = createLoginButton();
     this.formElement = this.createForm();
+    new FormSubmitHandler(
+      this.formElement,
+      this.firstNameField.getField(),
+      this.surnameField.getField()
+    );
   }
 
   private createForm(): HTMLElement {
