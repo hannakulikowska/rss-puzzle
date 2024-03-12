@@ -22,12 +22,14 @@ export default class ElementCreator {
   private createElement({
     tag,
     classNames,
+    id,
     textContent,
     callback,
     attributes,
   }: ElementParams): HTMLElement {
     const element = document.createElement(tag);
     if (classNames) this.setCssClasses(element, classNames);
+    if (id) this.setID(element, id);
     if (textContent !== undefined) this.setTextContent(element, textContent);
     if (callback) this.setCallback(element, callback);
     if (attributes) {
@@ -40,6 +42,11 @@ export default class ElementCreator {
 
   private setCssClasses(element: HTMLElement, cssClasses: string[]): void {
     cssClasses.forEach((cssClass) => element.classList.add(cssClass));
+  }
+
+  private setID(element: HTMLElement, id: string): void {
+    element.removeAttribute('id');
+    element.setAttribute('id', id);
   }
 
   private setTextContent(element: HTMLElement, text: string): void {

@@ -1,16 +1,11 @@
 @import '../../node_modules/modern-normalize/modern-normalize.css';
 
+@import './fontello.scss';
 @import './fonts.scss';
 @import './mixins.scss';
 @import './variables.scss';
-@import './components/fontello.scss';
-
-@import './pages/login/login.scss';
-@import './pages/login/login-inputs.scss';
-@import './pages/login/form-errors.scss';
-
-@import './components/background-image.scss';
-@import './components/button.scss';
+@import './animations/bounceInTop.scss';
+@import './animations/scaleUpCenter.scss';
 
 html {
   font-family: 'Open Sans';
@@ -20,8 +15,13 @@ html {
   padding: 0;
 }
 
-.page-wrapper {
-  width: 100vw;
-  height: 100dvh;
-  @include flex(center, center);
-}
+@import './components/page-wrapper.scss';
+@import './components/header.scss';
+@import './components/button.scss';
+
+@import './pages/login/login.scss';
+@import './pages/login/login-inputs.scss';
+@import './pages/login/form-errors.scss';
+@import './pages/login/form-button.scss';
+
+@import './pages/start/logout-button.scss';

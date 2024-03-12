@@ -1,3 +1,5 @@
+import initApp from '../app/initApp';
+
 export default class FormSubmitHandler {
   constructor(
     private formElement: HTMLElement,
@@ -15,6 +17,7 @@ export default class FormSubmitHandler {
         surname: this.surnameField.value,
       };
       localStorage.setItem('userEntry', JSON.stringify(userData));
+      initApp();
     });
   }
 }

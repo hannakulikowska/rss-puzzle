@@ -1,0 +1,26 @@
+[class^='icon-']:before,
+[class*=' icon-']:before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-headphones:before {
+  content: '\e800';
+}
+.icon-music:before {
+  content: '\e801';
+}
+.icon-picture:before {
+  content: '\e804';
+}
+.icon-doc-text:before {
+  content: '\f0f6';
+}

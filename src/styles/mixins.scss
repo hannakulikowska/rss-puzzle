@@ -3,3 +3,11 @@
   justify-content: $justify-content;
   align-items: $align-items;
 }
+
+@mixin backgroundImage($url) {
+  background-image: url($url);
+  background-origin: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
