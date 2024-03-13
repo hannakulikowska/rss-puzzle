@@ -1,0 +1,32 @@
+.form__button {
+  min-width: 110px;
+  padding: 0.8rem 2rem;
+  font-size: 1em;
+
+  &:enabled {
+    background-color: $color-active;
+    color: $color-white;
+  }
+
+  &:disabled {
+    background-color: $color-disabled;
+    color: $color-darkgray;
+  }
+
+  @media screen and (hover: hover) {
+    &:enabled:hover {
+      background-color: $color-hover;
+    }
+
+    &:enabled:active {
+      box-shadow: inset 0 0 30px rgba(40, 40, 40, 0.5);
+    }
+  }
+
+  @media (hover: none) {
+    &:enabled:active {
+      transform: translateY(2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+}

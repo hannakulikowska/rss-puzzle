@@ -1,37 +1,13 @@
 .button {
-  min-width: 110px;
-  padding: 0.8rem 2rem;
   border: 2px solid $color-white;
   border-radius: $border-radius;
-  font-size: 1em;
   transition: $transition;
 
   &:enabled {
-    background-color: $color-active;
-    color: $color-white;
     cursor: pointer;
   }
 
   &:disabled {
-    background-color: $color-disabled;
-    color: $color-darkgray;
     cursor: default;
-  }
-
-  @media screen and (hover: hover) {
-    &:enabled:hover {
-      background-color: $color-valid;
-    }
-
-    &:active {
-      transform: scale(0.95);
-      background-color: $color-valid;
-    }
-  }
-
-  @media (hover: none) {
-    &:active {
-      background-color: $color-valid;
-    }
   }
 }

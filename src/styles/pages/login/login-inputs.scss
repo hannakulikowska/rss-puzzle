@@ -9,7 +9,7 @@
   transition: $transition;
 
   &.error-background {
-    background-color: $color-invalid-opacity;
+    background-color: $color-invalid-bg;
     transition: $transition;
   }
 

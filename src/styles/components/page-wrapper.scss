@@ -1,0 +1,17 @@
+.page-wrapper {
+  width: 100vw;
+  height: 100dvh;
+  padding: 1em;
+  display: flex;
+  @include backgroundImage('src/assets/images/bg-image.webp');
+
+  &#login-wrapper {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &#start-wrapper {
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
