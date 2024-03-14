@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 0.5rem;
   padding: 4rem 3rem 3rem;
-  background: rgba(255, 255, 255, 0.6);
+  background: $color-white-bg;
   border-radius: 10px;
-  animation: bounceInTop 2s ease 0s 1 normal forwards;
+  animation: ScaleUpCenter 2s ease 0s 1 normal forwards;
 }

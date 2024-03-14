@@ -7,7 +7,7 @@ export default class LoginPage {
     this.loginForm = new LoginForm();
   }
 
-  public getFormElement(): HTMLElement {
+  public getContent(): HTMLElement {
     return this.loginForm.getFormElement();
   }
 }

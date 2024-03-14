@@ -13,6 +13,19 @@ html {
   font-style: normal;
   margin: 0;
   padding: 0;
+  height: 100vh;
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 10px;
+  }
+}
+
+body {
+  height: 100%;
 }
 
 @import './components/page-wrapper.scss';
@@ -24,4 +37,5 @@ html {
 @import './pages/login/form-errors.scss';
 @import './pages/login/form-button.scss';
 
+@import './pages/start/start-page.scss';
 @import './pages/start/logout-button.scss';

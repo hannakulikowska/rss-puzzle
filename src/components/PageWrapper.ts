@@ -1,22 +1,15 @@
 import ElementCreator from '../utils/elementСreator';
-import { ElementParams } from '../models/interfaces/ElementParams';
 
 export class PageWrapper {
   private wrapperElement: HTMLElement;
 
   constructor(id?: string, classNames: string[] = ['page-wrapper']) {
-    this.wrapperElement = this.createWrapper(classNames, id);
-  }
-
-  private createWrapper(classNames: string[], id?: string): HTMLElement {
-    const params: ElementParams = {
+    const elementCreator = new ElementCreator({
       tag: 'div',
-      classNames: classNames,
-      ...(id && { id: id }),
-    };
-    const wrapperCreator = new ElementCreator(params);
-    const wrapper = wrapperCreator.getElement() as HTMLElement;
-    return wrapper;
+      classNames,
+      ...(id && { id }),
+    });
+    this.wrapperElement = elementCreator.getElement() as HTMLElement;
   }
 
   public getWrapper(): HTMLElement {
