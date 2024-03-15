@@ -1,6 +1,6 @@
 import ElementCreator from '../utils/elementСreator';
 
-export default class Greeting {
+export default class AppName {
   private appNameElement: HTMLElement;
 
   constructor() {
