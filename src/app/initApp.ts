@@ -3,7 +3,7 @@ import LoginPage from '../pages/login/LoginPage';
 import StartPage from '../pages/start/StartPage';
 import Header from '../components/Header';
 
-const pageWrapper = new PageWrapper();
+export const pageWrapper = new PageWrapper();
 
 export default function initApp() {
   pageWrapper.cleanWrapper();

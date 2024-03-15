@@ -1,6 +1,8 @@
 export default interface ButtonParams {
-  type: 'button' | 'submit' | 'reset';
   textContent: string;
   classNames?: string[];
+  id?: string;
+  type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
+  onClick?: (event: Event) => void;
 }
