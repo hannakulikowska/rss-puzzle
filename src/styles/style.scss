@@ -6,6 +6,7 @@
 @import './variables.scss';
 @import './animations/bounceInTop.scss';
 @import './animations/scaleUpCenter.scss';
+@import './animations/attention.scss';
 
 html {
   font-family: 'Open Sans';
@@ -39,3 +40,4 @@ body {
 
 @import './pages/start/start-page.scss';
 @import './pages/start/logout-button.scss';
+@import './pages/start/start-greeting.scss';

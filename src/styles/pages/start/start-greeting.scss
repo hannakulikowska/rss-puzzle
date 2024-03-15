@@ -1,0 +1,20 @@
+.start__greeting-container {
+  text-align: center;
+  font-family: 'Hello Dina Script';
+  font-style: normal;
+  font-weight: bold;
+}
+
+.start__name-greeting {
+  color: $color-invalid;
+  animation: attention 2s ease 0s 1 normal forwards;
+  font-weight: normal;
+  font-size: 3.5em;
+  margin: 0;
+}
+
+.start__follow-up-text {
+  max-width: 12em;
+  font-size: 2.5em;
+  margin: 0.5em 0em;
+}
