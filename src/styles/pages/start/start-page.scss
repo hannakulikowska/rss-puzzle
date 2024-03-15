@@ -5,18 +5,12 @@
 }
 
 .start__content {
-  max-width: 50em;
   padding: 2em;
   background: $color-white-bg;
   border-radius: 1em;
   @include flex(flex-start, center);
   flex-direction: column;
   animation: bounceInTop 2s ease 0s 1 normal forwards;
-}
-.start__title {
-  font-size: 2.5em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .start__description {

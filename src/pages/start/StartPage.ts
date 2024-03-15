@@ -1,4 +1,4 @@
-import { contentWrapper, titleElement, paragraphElement } from './StartContent';
+import { contentWrapper, paragraphElement } from './StartContent';
 import ElementCreator from '../../utils/elementСreator';
 import Greeting from './StartGreeting';
 
@@ -13,7 +13,6 @@ export default class StartPage {
 
     if (contentWrapper) {
       wrapper.addInnerElement(contentWrapper);
-      if (titleElement) contentWrapper.appendChild(titleElement);
       contentWrapper.appendChild(greeting);
       if (paragraphElement) contentWrapper.appendChild(paragraphElement);
     }

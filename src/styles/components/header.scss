@@ -1,4 +1,11 @@
 .header {
-  @include flex(flex-end, center);
+  @include flex(space-between, center);
   margin-bottom: 4em;
+}
+
+.header__title {
+  color: $color-active;
+  font-weight: bold;
+  font-size: 2em;
+  text-transform: uppercase;
 }

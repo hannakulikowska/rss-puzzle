@@ -5,12 +5,6 @@ export const contentWrapper = generateElement({
   classNames: ['start__content'],
 });
 
-export const titleElement = generateElement({
-  tag: 'h1',
-  textContent: 'RSS-Puzzle',
-  classNames: ['start__title'],
-});
-
 export const greetingElement = generateElement({
   tag: 'h2',
   textContent:

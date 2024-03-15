@@ -1,9 +1,8 @@
 .page-wrapper {
-  max-width: 1920px;
-  height: 100%;
+  max-width: 1024px;
+  height: 100dvh;
   padding: 1em;
   margin: 0 auto;
-  @include backgroundImage('src/assets/images/bg-image.webp');
 
   &#login {
     @include flex(center, center);

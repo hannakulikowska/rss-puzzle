@@ -1,12 +1,15 @@
 import ElementCreator from '../utils/elementСreator';
 import LogoutButton from './LogoutButton';
+import Greeting from './AppName';
 
 export default class Header {
   private headerElement: HTMLElement;
 
   constructor() {
     this.headerElement = this.createHeader();
+    const greeting = new Greeting();
     const logoutButton = new LogoutButton();
+    this.headerElement.appendChild(greeting.getElement());
     this.headerElement.appendChild(logoutButton.getButton());
   }
 
