@@ -1,13 +1,19 @@
-import Header from '../../components/Header';
+import { contentWrapper, titleElement, paragraphElement } from './StartContent';
+import ElementCreator from '../../utils/elementСreator';
 
 export default class StartPage {
-  private header: Header;
+  public getContent(): HTMLElement {
+    const wrapper = new ElementCreator({
+      tag: 'main',
+      classNames: ['start'],
+    });
 
-  constructor() {
-    this.header = new Header();
-  }
+    if (contentWrapper) {
+      wrapper.addInnerElement(contentWrapper);
+      if (titleElement) contentWrapper.appendChild(titleElement);
+      if (paragraphElement) contentWrapper.appendChild(paragraphElement);
+    }
 
-  public getHeaderElement(): HTMLElement {
-    return this.header.getHeader();
+    return wrapper.getElement() as HTMLElement;
   }
 }
