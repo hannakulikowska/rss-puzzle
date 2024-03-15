@@ -11,6 +11,13 @@ export const titleElement = generateElement({
   classNames: ['start__title'],
 });
 
+export const greetingElement = generateElement({
+  tag: 'h2',
+  textContent:
+    'Hello, [Имя] [Фамилия]! Ready to puzzle out some phrases? Your adventure in English awaits!',
+  classNames: ['start__greeting'],
+});
+
 export const paragraphElement = generateElement({
   tag: 'p',
   textContent:
