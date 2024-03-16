@@ -1,8 +1,8 @@
 .form {
   @include flex(center, center);
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 4rem 3rem 3rem;
+  gap: 8px;
+  padding: 64px 3rem 48px;
   background: $color-white-bg;
   border-radius: 10px;
   animation: ScaleUpCenter 2s ease 0s 1 normal forwards;

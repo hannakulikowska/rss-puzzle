@@ -12,7 +12,6 @@ export default function initApp() {
     const header = new Header().getHeader();
     const startPage = new StartPage();
     pageWrapper.getWrapper().removeAttribute('id');
-    pageWrapper.getWrapper().setAttribute('id', 'start');
     pageWrapper.getWrapper().appendChild(header);
     pageWrapper.getWrapper().appendChild(startPage.getContent());
   } else {

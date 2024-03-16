@@ -1,0 +1,20 @@
+.phrase,
+.puzzle {
+  width: 100%;
+  height: auto;
+  min-height: 42em;
+  padding: 1em;
+  border-radius: $border-radius;
+  background: $color-white-bg;
+  animation: ScaleUpCenter 2s ease 0s 1 normal forwards;
+}
+
+.phrase {
+  min-height: 4.2em;
+}
+
+.puzzle {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+}

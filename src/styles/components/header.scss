@@ -1,6 +1,5 @@
 .header {
   @include flex(space-between, center);
-  margin-bottom: 4em;
 }
 
 .header__title {

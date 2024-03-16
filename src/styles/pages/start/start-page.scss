@@ -1,9 +1,3 @@
-.start {
-  @include flex(flex-start, center);
-  flex-direction: column;
-  color: $color-darkgray;
-}
-
 .start__content {
   padding: 2em;
   background: $color-white-bg;

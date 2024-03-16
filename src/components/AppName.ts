@@ -10,7 +10,7 @@ export default class AppName {
       textContent: 'RSS-Puzzle',
     }).getElement();
 
-    this.appNameElement = element!;
+    this.appNameElement = element;
   }
 
   public getElement(): HTMLElement {
