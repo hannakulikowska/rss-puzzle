@@ -1,19 +1,17 @@
 import { ElementParams } from '../models/interfaces/ElementParams';
 
 export default class ElementCreator {
-  private element: HTMLElement | null;
+  private element: HTMLElement;
 
   constructor(params: ElementParams) {
     this.element = this.createElement(params);
   }
 
-  public getElement(): HTMLElement | null {
+  public getElement(): HTMLElement {
     return this.element;
   }
 
   public addInnerElement(element: HTMLElement | ElementCreator): void {
-    if (!this.element) return;
-
     const childElement =
       element instanceof ElementCreator ? element.getElement() : element;
     if (childElement) this.element.append(childElement);
@@ -29,9 +27,9 @@ export default class ElementCreator {
   }: ElementParams): HTMLElement {
     const element = document.createElement(tag);
     if (classNames) this.setCssClasses(element, classNames);
-    if (id) this.setID(element, id);
-    if (textContent !== undefined) this.setTextContent(element, textContent);
-    if (callback) this.setCallback(element, callback);
+    if (id) element.setAttribute('id', id);
+    if (textContent !== undefined) element.textContent = textContent;
+    if (callback) element.addEventListener('click', callback);
     if (attributes) {
       Object.keys(attributes).forEach((key) => {
         element.setAttribute(key, attributes[key]);
@@ -42,21 +40,5 @@ export default class ElementCreator {
 
   private setCssClasses(element: HTMLElement, cssClasses: string[]): void {
     cssClasses.forEach((cssClass) => element.classList.add(cssClass));
-  }
-
-  private setID(element: HTMLElement, id: string): void {
-    element.removeAttribute('id');
-    element.setAttribute('id', id);
-  }
-
-  private setTextContent(element: HTMLElement, text: string): void {
-    element.textContent = text;
-  }
-
-  private setCallback(
-    element: HTMLElement,
-    callback: (event: Event) => void
-  ): void {
-    element.addEventListener('click', callback);
   }
 }

@@ -28,8 +28,8 @@ export default class Greeting {
         'Ready to puzzle out some phrases? Your adventure in English awaits!',
     }).getElement();
 
-    if (nameElement) this.greetingElement.appendChild(nameElement);
-    if (followUpElement) this.greetingElement.appendChild(followUpElement);
+    this.greetingElement.appendChild(nameElement);
+    this.greetingElement.appendChild(followUpElement);
   }
 
   public getElement(): HTMLElement {

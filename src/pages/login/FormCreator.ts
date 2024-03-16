@@ -42,7 +42,7 @@ export default class FormCreator {
     formCreator.addInnerElement(this.surnameField.getField());
     formCreator.addInnerElement(this.surnameField.getErrorContainer());
     formCreator.addInnerElement(this.loginButton);
-    return formCreator.getElement()!;
+    return formCreator.getElement();
   }
 
   public validateForm(): void {

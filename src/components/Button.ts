@@ -9,7 +9,7 @@ export default class Button {
       textContent,
       classNames = [],
       id,
-      type = 'button',
+      type,
       disabled = false,
       onClick,
     } = params;
@@ -26,7 +26,7 @@ export default class Button {
       attributes,
     });
 
-    this.button = elementCreator.getElement()!;
+    this.button = elementCreator.getElement();
   }
 
   public getElement(): HTMLElement {

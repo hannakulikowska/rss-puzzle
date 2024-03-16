@@ -1,0 +1,16 @@
+.word {
+  display: inline-block;
+  text-align: center;
+  padding: 0.3em 0;
+  border: 1px solid $color-darkgray;
+  height: auto;
+  background: $color-white-bg;
+  color: $color-darkgray;
+  font-size: 1.2em;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.word:not(:last-child) {
+  margin-right: -1px;
+}

@@ -1,0 +1,6 @@
+.main {
+  @include flex(center, center);
+  flex-direction: column;
+  color: $color-darkgray;
+  margin: auto 0;
+}

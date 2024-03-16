@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@types/lodash": "^4.14.202",
-    "lighthouse": "^11.6.0"
+    "lighthouse": "^11.6.0",
+    "lodash": "^4.17.21"
   }
 }

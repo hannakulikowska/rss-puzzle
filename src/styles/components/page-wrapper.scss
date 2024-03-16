@@ -4,7 +4,12 @@
   padding: 1em;
   margin: 0 auto;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   &#login {
-    @include flex(center, center);
+    justify-content: center;
+    align-items: center;
   }
 }
