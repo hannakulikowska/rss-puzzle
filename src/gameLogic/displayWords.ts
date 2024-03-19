@@ -8,10 +8,11 @@ export const displayWords = (phrase: string, container: HTMLElement) => {
   const totalLetters = _.sumBy(words, (word) => word.length);
   container.innerHTML = '';
 
-  shuffledWords.forEach((word) => {
+  shuffledWords.forEach((word, index) => {
     const wordElement = document.createElement('span');
     wordElement.classList.add('word');
     wordElement.textContent = word;
+    wordElement.dataset.index = index.toString();
 
     const wordWidthPercentage = (word.length / totalLetters) * 100;
     wordElement.style.width = `${wordWidthPercentage}%`;

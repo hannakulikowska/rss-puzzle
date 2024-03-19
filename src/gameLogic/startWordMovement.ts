@@ -1,16 +1,19 @@
+import { puzzleContainer } from '../components/puzzleContainer';
+import { returnWordToOriginalPosition } from './returnWordToOriginalPosition';
+
 export function startWordMovement(
   wordElement: HTMLElement,
   targetContainer: HTMLElement
 ): void {
+  const isMovingToPuzzle = targetContainer === puzzleContainer;
   const targetRect = targetContainer.getBoundingClientRect();
   const wordRect = wordElement.getBoundingClientRect();
-
   const containerStyle = getComputedStyle(targetContainer);
   let startX = parseFloat(containerStyle.paddingLeft);
   let startY = parseFloat(containerStyle.paddingTop);
-
   const lastElement = targetContainer.lastElementChild;
-  if (lastElement) {
+
+  if (lastElement && isMovingToPuzzle) {
     const lastElementRect = lastElement.getBoundingClientRect();
     startX =
       lastElementRect.right -
@@ -30,6 +33,10 @@ export function startWordMovement(
   setTimeout(() => {
     wordElement.style.transition = '';
     wordElement.style.transform = '';
-    targetContainer.appendChild(wordElement);
+    if (isMovingToPuzzle) {
+      targetContainer.appendChild(wordElement);
+    } else {
+      returnWordToOriginalPosition(wordElement);
+    }
   }, 500);
 }
