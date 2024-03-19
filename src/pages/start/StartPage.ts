@@ -2,7 +2,7 @@ import { contentWrapper, paragraphElement } from './StartContent';
 import Greeting from './StartGreeting';
 import { startButton } from './StartButton';
 import { mainElement } from '../../components/Main';
-import { puzzleContainer } from '../main/puzzleContainer';
+import { puzzleContainer } from '../../components/puzzleContainer';
 
 export default class StartPage {
   public getContent(): HTMLElement {
