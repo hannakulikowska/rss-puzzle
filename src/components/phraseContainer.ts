@@ -1,4 +1,4 @@
-import ElementCreator from '../../utils/elementСreator';
+import ElementCreator from '../utils/elementСreator';
 
 export const phraseContainer = new ElementCreator({
   tag: 'div',

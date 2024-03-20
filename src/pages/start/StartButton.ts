@@ -1,5 +1,5 @@
 import Button from '../../components/Button';
-import GameController from '../main/GameController';
+import GameController from '../../gameLogic/GameController';
 
 export const startButton = new Button({
   textContent: 'Start',

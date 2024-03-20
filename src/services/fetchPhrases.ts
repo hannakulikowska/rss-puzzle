@@ -1,4 +1,4 @@
-import { WordData, Rounds } from '../../models/interfaces/WordDataParams';
+import { WordData, Rounds } from '../models/interfaces/WordDataParams';
 
 export async function fetchPhrases(): Promise<string[]> {
   const response = await fetch('src/assets/data/wordCollectionLevel1.json');

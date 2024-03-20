@@ -1,8 +1,8 @@
-import { mainElement } from '../../components/Main';
-import { phraseContainer } from './phraseContainer';
-import { puzzleContainer } from './puzzleContainer';
-import Phrase from './Phrase';
-import { fetchPhrases } from './fetchPhrases';
+import { mainElement } from '../components/Main';
+import { phraseContainer } from '../components/phraseContainer';
+import { puzzleContainer } from '../components/puzzleContainer';
+import Phrase from '../components/Phrase';
+import { fetchPhrases } from '../services/fetchPhrases';
 
 export default class GameController {
   static async updateMainContent(): Promise<void> {
@@ -10,8 +10,7 @@ export default class GameController {
     const mainDOMElement = mainElement.getElement();
     if (mainDOMElement) {
       mainDOMElement.innerHTML = '';
-      const phraseInstance = new Phrase(phrases[0], phraseContainer);
-      phraseInstance.displayWords();
+      new Phrase(phrases[0], phraseContainer);
       mainDOMElement.appendChild(puzzleContainer);
       mainDOMElement.appendChild(phraseContainer);
     }
